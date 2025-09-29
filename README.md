@@ -59,7 +59,7 @@ npm install
 npm run dev
 
 
-## Development Approach
+## Building Approach
 
 ### Phase 1: Foundation & Core Setup
 • Set up the project structure with Vite + React + TypeScript for fast development
@@ -78,5 +78,3 @@ npm run dev
 • Added Three.js background with coffee-themed particle effects for visual appeal
 • Implemented smooth animations using Framer Motion for enhanced user experience
 • Applied coffee-beige dark theme with proper contrast ratios for accessibility
-
----
