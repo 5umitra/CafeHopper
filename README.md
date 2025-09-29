@@ -1,4 +1,4 @@
-# ☕ CafeHopper
+# CafeHopper
 
 <div align="center">
 
@@ -15,195 +15,66 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
-[🚀 Live Demo](https://cafehop.netlify.app) • [📖 Documentation](#installation) • [🐛 Report Bug](https://github.com/yourusername/cafehop/issues) • [✨ Request Feature](https://github.com/yourusername/cafehop/issues)
+[Live Demo](https://cafehop.netlify.app) • [Documentation](#installation) • [Report Bug](https://github.com/yourusername/cafehop/issues) • [Request Feature](https://github.com/yourusername/cafehop/issues)
 
 </div>
 
 ---
 
-## 🎯 Description
+## Overview
 
-**CafeHopper** is an interactive web application that helps coffee enthusiasts discover amazing coffee spots in their vicinity. Using real-time geolocation and OpenStreetMap data, users can explore nearby cafes with an intuitive map interface, view detailed information about each location, and plan their perfect coffee hopping route.
+**CafeHopper** is a web application designed to help users discover coffee shops near their location.  
+It leverages real-time geolocation and OpenStreetMap data to provide an interactive map, detailed information about each cafe, and tools to plan your coffee visits.
 
-Whether you're a digital nomad looking for the perfect workspace, a coffee connoisseur seeking specialty brews, or simply someone who loves exploring new places, CafeHopper makes it easy to find your next favorite coffee destination.
+---
 
-## ✨ Features
+## Key Features
 
-### 🗺️ **Interactive Map Experience**
-- **Real-time Location Detection** - Automatically finds your current location
-- **Dynamic Cafe Markers** - Beautiful custom markers for each coffee shop
-- **Smooth Animations** - Fluid map interactions with zoom and pan controls
-- **Responsive Design** - Works seamlessly on desktop and mobile devices
+### Interactive Map
+- Real-time location detection  
+- Custom markers for cafes  
+- Smooth zoom and pan controls  
+- Responsive for desktop and mobile  
 
-### ☕ **Smart Cafe Discovery**
-- **8km Radius Search** - Finds cafes within walking/driving distance
-- **Distance Calculation** - Shows exact distance from your location
-- **Detailed Information** - Name, rating, specialty, and address for each cafe
-- **Real-time Data** - Powered by OpenStreetMap's live database
+### Cafe Discovery
+- Search radius of 8 km  
+- Distance calculation from user’s location  
+- Cafe details including name, specialty, and address  
+- Data powered by OpenStreetMap and Overpass API  
 
-### 🎨 **Premium User Interface**
-- **3D Background Effects** - Stunning Three.js particle animations
-- **Coffee-themed Design** - Warm, inviting color palette
-- **Micro-interactions** - Delightful hover effects and transitions
-- **Accessibility First** - Respects user motion preferences
+### User Experience
+- Coffee-inspired design with warm tones  
+- Micro-interactions and animations  
+- Mobile-first responsive design  
+- Accessibility-focused  
 
-### 📱 **Mobile-First Design**
-- **Bottom Drawer Interface** - Easy access to cafe list on mobile
-- **Touch-friendly Controls** - Optimized for mobile interaction
-- **Progressive Enhancement** - Works great on any device
+---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-### **Frontend Framework**
-- **React 18.3.1** - Modern React with hooks and concurrent features
-- **TypeScript 5.5.3** - Type-safe development experience
-- **Vite 5.4.2** - Lightning-fast build tool and dev server
+**Frontend**: React 18, TypeScript, Vite  
+**Styling**: Tailwind CSS, Framer Motion, Lucide Icons  
+**Mapping**: Leaflet, React Leaflet, OpenStreetMap, Overpass API  
+**3D Visuals**: Three.js, React Three Fiber, Drei  
+**Dev Tools**: ESLint, Vitest, PostCSS  
 
-### **Styling & UI**
-- **Tailwind CSS 3.4.1** - Utility-first CSS framework
-- **Framer Motion 11.0.0** - Production-ready motion library
-- **Lucide React 0.344.0** - Beautiful, customizable icons
+---
 
-### **Mapping & Geolocation**
-- **Leaflet 1.9.4** - Leading open-source JavaScript library for maps
-- **React Leaflet 4.2.1** - React components for Leaflet maps
-- **OpenStreetMap** - Community-driven map data
-- **Overpass API** - Real-time OpenStreetMap data queries
-
-### **3D Graphics**
-- **Three.js 0.159.0** - Cross-browser JavaScript library for 3D graphics
-- **React Three Fiber 8.15.0** - React renderer for Three.js
-- **React Three Drei 9.92.0** - Useful helpers for React Three Fiber
-
-### **Development Tools**
-- **ESLint 9.9.1** - Code linting and formatting
-- **Vitest 1.1.0** - Fast unit testing framework
-- **PostCSS & Autoprefixer** - CSS processing and vendor prefixes
-
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
-- **Node.js** (version 18.0.0 or higher)
-- **npm** or **yarn** package manager
-- Modern web browser with geolocation support
+- Node.js 18+  
+- npm or yarn  
+- A modern browser with geolocation support  
 
-### Quick Start
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/cafehop.git
-   cd cafehop
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   ```
-   Navigate to http://localhost:5173
-   ```
-
-### Build for Production
-
+### Steps
 ```bash
-# Create optimized production build
-npm run build
+# Clone repository
+git clone https://github.com/yourusername/cafehop.git
+cd cafehop
 
-# Preview production build locally
-npm run preview
-```
+# Install dependencies
+npm install
 
-## 📖 Usage
-
-### Getting Started
-1. **Allow Location Access** - Grant permission when prompted to find nearby cafes
-2. **Explore the Map** - Use zoom controls and drag to navigate
-3. **Discover Cafes** - Click on coffee markers to view details
-4. **Browse the List** - Use the sidebar (desktop) or bottom drawer (mobile) to see all cafes
-5. **Plan Your Route** - Click on any cafe to center the map and get directions
-
-### Key Interactions
-- **🖱️ Click Markers** - View cafe details in popup
-- **📱 Tap Cafe List** - Auto-navigate to cafe location
-- **🔍 Zoom Controls** - Custom zoom buttons in top-right corner
-- **📍 Location Tracking** - Your position is marked with a pulsing indicator
-
-## 📸 Screenshots
-
-### Desktop Experience
-![Desktop View](https://via.placeholder.com/800x500/8b5a3c/ffffff?text=Desktop+Map+View)
-*Interactive map with sidebar showing nearby cafes*
-
-### Mobile Interface
-![Mobile View](https://via.placeholder.com/400x700/d4a574/ffffff?text=Mobile+Bottom+Drawer)
-*Mobile-optimized bottom drawer interface*
-
-### Cafe Details
-![Cafe Popup](https://via.placeholder.com/600x400/f4e4bc/8b5a3c?text=Cafe+Details+Popup)
-*Detailed cafe information with ratings and distance*
-
-## 🧪 Testing
-
-Run the comprehensive test suite:
-
-```bash
-# Run all tests
-npm run test
-
-# Run tests with UI
-npm run test:ui
-
-# Type checking
-npm run typecheck
-```
-
-## 🤝 Contributing
-
-We welcome contributions from the community! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
-3. **Commit your changes** (`git commit -m 'Add amazing feature'`)
-4. **Push to the branch** (`git push origin feature/amazing-feature`)
-5. **Open a Pull Request**
-
-### Development Guidelines
-- Follow TypeScript best practices
-- Write tests for new features
-- Maintain consistent code style with ESLint
-- Update documentation for significant changes
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **OpenStreetMap Contributors** - For providing free, editable map data
-- **Overpass API** - For real-time OpenStreetMap queries
-- **Pexels** - For beautiful stock photography
-- **React Community** - For amazing tools and libraries
-- **Coffee Shops Everywhere** - For inspiring this project ☕
-
-## 📞 Contact & Support
-
-- **GitHub Issues** - [Report bugs or request features](https://github.com/yourusername/cafehop/issues)
-- **Email** - your.email@example.com
-- **Twitter** - [@yourusername](https://twitter.com/yourusername)
-
----
-
-<div align="center">
-
-**Made with ❤️ and lots of ☕ by [Your Name](https://github.com/yourusername)**
-
-*If you found this project helpful, please consider giving it a ⭐ on GitHub!*
-
-</div>
+# Run development server
+npm run dev
