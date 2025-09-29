@@ -58,6 +58,8 @@ npm install
 # Run development server
 npm run dev
 
+---
+
 The project follows a clean and modular structure for scalability and maintainability:
 ## Project Structure
 
