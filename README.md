@@ -1,25 +1,29 @@
 # CafeHopper
 
-<div align="center">
-
-![CafeHopper Logo](https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop)
-
-**Discover Great Coffee Spots Around You**
-
-[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.4.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Leaflet](https://img.shields.io/badge/Leaflet-1.9.4-199900?style=for-the-badge&logo=leaflet&logoColor=white)](https://leafletjs.com/)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
-
-[Live Demo](https://cafehop.netlify.app) • [Documentation](#installation) • [Report Bug](https://github.com/yourusername/cafehop/issues) • [Request Feature](https://github.com/yourusername/cafehop/issues)
-
-</div>
-
----
+project/
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── hooks/ # Custom React hooks
+│ ├── services/ # API and data handling
+│ ├── types/ # TypeScript type definitions
+│ ├── utils/ # Helper utility functions
+│ ├── App.tsx # Main application entry
+│ ├── index.css # Global styles
+│ ├── main.tsx # React DOM rendering
+│ └── vite-env.d.ts # Vite environment definitions
+├── .gitignore
+├── eslint.config.js # ESLint configuration
+├── index.html # HTML template
+├── package.json # Dependencies and scripts
+├── package-lock.json # Lock file
+├── postcss.config.js # PostCSS configuration
+├── README.md # Project documentation
+├── tailwind.config.js # Tailwind CSS configuration
+├── tsconfig.app.json # TypeScript config (app)
+├── tsconfig.json # Base TypeScript config
+├── tsconfig.node.json # TypeScript config (node)
+├── vite.config.ts # Vite build configuration
+└── vitest.config.ts # Testing configuration
 
 ## Overview
 
