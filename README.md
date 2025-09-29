@@ -57,3 +57,33 @@ npm install
 
 # Run development server
 npm run dev
+
+The project follows a clean and modular structure for scalability and maintainability:
+## Project Structure
+
+```plaintext
+project/
+├── src/
+│   ├── components/        # Reusable UI components
+│   ├── hooks/             # Custom React hooks
+│   ├── services/          # API and data handling
+│   ├── types/             # TypeScript type definitions
+│   ├── utils/             # Helper utility functions
+│   ├── App.tsx            # Main application entry
+│   ├── index.css          # Global styles
+│   ├── main.tsx           # React DOM rendering
+│   └── vite-env.d.ts      # Vite environment definitions
+├── .gitignore
+├── eslint.config.js       # ESLint configuration
+├── index.html             # HTML template
+├── package.json           # Dependencies and scripts
+├── package-lock.json      # Lock file
+├── postcss.config.js      # PostCSS configuration
+├── README.md              # Project documentation
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.app.json      # TypeScript config (app)
+├── tsconfig.json          # Base TypeScript config
+├── tsconfig.node.json     # TypeScript config (node)
+├── vite.config.ts         # Vite build configuration
+└── vitest.config.ts       # Testing configuration
+
