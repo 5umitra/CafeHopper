@@ -37,8 +37,8 @@ const UserMarker: React.FC<UserMarkerProps> = ({ location }) => {
             left: 50%;
             width: 12px;
             height: 12px;
-            background: #d4a574;
-            border: 3px solid white;
+            background: #92400e;
+            border: 3px solid #fef3c7;
             border-radius: 50%;
             transform: translate(-50%, -50%);
             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
@@ -51,7 +51,7 @@ const UserMarker: React.FC<UserMarkerProps> = ({ location }) => {
             left: 50%;
             width: 24px;
             height: 24px;
-            background: rgba(212, 165, 116, 0.4);
+            background: rgba(146, 64, 14, 0.4);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             animation: pulse 2s infinite;
@@ -75,9 +75,9 @@ const UserMarker: React.FC<UserMarkerProps> = ({ location }) => {
       </style>
       <Marker position={[location.lat, location.lng]} icon={userIcon}>
         <Popup>
-          <div className="text-center p-2 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg">
+          <div className="text-center p-2 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg">
             <h3 className="font-semibold text-amber-800">You are here</h3>
-            <p className="text-sm text-amber-600 mt-1">Current location</p>
+            <p className="text-sm text-amber-700 mt-1">Current location</p>
           </div>
         </Popup>
       </Marker>

@@ -43,7 +43,7 @@ const MapView: React.FC<MapViewProps> = ({
   };
 
   return (
-    <div className="h-full w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-amber-200/20 bg-gradient-to-br from-amber-50/10 to-orange-100/10 backdrop-blur-sm">
+    <div className="h-full w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-amber-700/30 bg-gradient-to-br from-amber-900/15 to-amber-800/20 backdrop-blur-sm">
       <MapContainer
         center={mapState.center}
         zoom={mapState.zoom}
@@ -60,13 +60,13 @@ const MapView: React.FC<MapViewProps> = ({
         <div className="absolute top-4 right-4 z-[1000] flex flex-col gap-1">
           <button
             onClick={() => mapRef.current?.zoomIn()}
-            className="w-10 h-10 bg-amber-50/95 backdrop-blur-md rounded-xl shadow-xl hover:bg-amber-100/95 transition-all duration-200 flex items-center justify-center text-amber-800 hover:text-amber-900 font-bold text-lg hover:scale-110"
+            className="w-10 h-10 bg-amber-100/95 backdrop-blur-md rounded-xl shadow-xl hover:bg-amber-200/95 transition-all duration-200 flex items-center justify-center text-amber-800 hover:text-amber-900 font-bold text-lg hover:scale-110"
           >
             +
           </button>
           <button
             onClick={() => mapRef.current?.zoomOut()}
-            className="w-10 h-10 bg-amber-50/95 backdrop-blur-md rounded-xl shadow-xl hover:bg-amber-100/95 transition-all duration-200 flex items-center justify-center text-amber-800 hover:text-amber-900 font-bold text-lg hover:scale-110"
+            className="w-10 h-10 bg-amber-100/95 backdrop-blur-md rounded-xl shadow-xl hover:bg-amber-200/95 transition-all duration-200 flex items-center justify-center text-amber-800 hover:text-amber-900 font-bold text-lg hover:scale-110"
           >
             −
           </button>

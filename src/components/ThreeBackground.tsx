@@ -38,7 +38,7 @@ const CoffeeParticles: React.FC = () => {
     <Points ref={pointsRef} positions={positions} stride={3} frustumCulled={false}>
       <PointMaterial
         transparent
-        color="#d4a574"
+        color="#92400e"
         size={0.08}
         sizeAttenuation={true}
         depthWrite={false}
@@ -75,7 +75,7 @@ const ParticleField: React.FC = () => {
     <Points ref={pointsRef} positions={positions} stride={3} frustumCulled={false}>
       <PointMaterial
         transparent
-        color="#f3e8d3"
+        color="#d4a574"
         size={0.04}
         sizeAttenuation={true}
         depthWrite={false}
@@ -94,12 +94,12 @@ const ThreeBackground: React.FC = () => {
       <Canvas
         camera={{ position: [0, 0, 10], fov: 75 }}
         style={{ 
-          background: 'linear-gradient(135deg, #8b5a3c 0%, #a0522d 25%, #cd853f 50%, #daa520 75%, #f4e4bc 100%)'
+          background: 'linear-gradient(135deg, #451a03 0%, #78350f 25%, #92400e 50%, #a16207 75%, #ca8a04 100%)'
         }}
       >
         <ambientLight intensity={0.6} />
-        <pointLight position={[10, 10, 10]} intensity={0.8} color="#f4e4bc" />
-        <pointLight position={[-10, -10, -5]} intensity={0.4} color="#d4a574" />
+        <pointLight position={[10, 10, 10]} intensity={0.8} color="#fbbf24" />
+        <pointLight position={[-10, -10, -5]} intensity={0.4} color="#92400e" />
         {!prefersReducedMotion && (
           <>
             <ParticleField />

@@ -79,13 +79,13 @@ const App: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="text-center p-8 bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20"
+          className="text-center p-8 bg-amber-900/20 backdrop-blur-xl rounded-2xl shadow-2xl border border-amber-700/30"
         >
-          <Loader2 className="w-8 h-8 text-white animate-spin mx-auto mb-4" />
+          <Loader2 className="w-8 h-8 text-amber-100 animate-spin mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-white mb-2">
             {locationLoading ? 'Finding your location...' : 'Loading nearby cafes...'}
           </h2>
-          <p className="text-white/70">
+          <p className="text-amber-100/80">
             {locationLoading 
               ? 'Please allow location access to find nearby cafes'
               : 'Searching for cafes within 8km of your location'
@@ -109,12 +109,12 @@ const App: React.FC = () => {
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-white/20 backdrop-blur-sm rounded-xl border border-white/30">
-              <MapPin className="w-6 h-6 text-white" />
+            <div className="p-3 bg-amber-900/30 backdrop-blur-sm rounded-xl border border-amber-700/40">
+              <MapPin className="w-6 h-6 text-amber-100" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-amber-50">CafeHopper</h1>
-              <p className="text-amber-100/80 text-sm">Hop from cafe to cafe around you</p>
+              <h1 className="text-2xl font-bold text-amber-100">CafeHopper</h1>
+              <p className="text-amber-200/90 text-sm">Hop from cafe to cafe around you</p>
             </div>
           </div>
         </div>
@@ -129,14 +129,14 @@ const App: React.FC = () => {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-24 left-6 right-6 z-40 motion-safe:animate-pulse"
           >
-            <div className="p-4 bg-red-600/90 backdrop-blur-md text-white rounded-2xl shadow-xl border border-red-400/30">
+            <div className="p-4 bg-red-800/90 backdrop-blur-md text-red-100 rounded-2xl shadow-xl border border-red-600/40">
               <div className="flex items-center gap-3">
                 <AlertCircle className="w-5 h-5 flex-shrink-0" />
                 <div>
                   <p className="font-medium">
                     {locationError ? 'Location Error' : 'Cafes Loading Error'}
                   </p>
-                  <p className="text-sm text-red-100">{locationError || cafesError}</p>
+                  <p className="text-sm text-red-200">{locationError || cafesError}</p>
                 </div>
               </div>
             </div>
@@ -153,12 +153,12 @@ const App: React.FC = () => {
             exit={{ opacity: 0, y: -20 }}
             className="absolute top-24 left-6 right-6 z-40 motion-safe:animate-bounce"
           >
-            <div className="p-4 bg-amber-600/90 backdrop-blur-md text-amber-50 rounded-2xl shadow-xl border border-amber-400/30">
+            <div className="p-4 bg-amber-800/90 backdrop-blur-md text-amber-100 rounded-2xl shadow-xl border border-amber-600/40">
               <div className="flex items-center gap-3">
                 <Coffee className="w-5 h-5 flex-shrink-0" />
                 <div>
                   <p className="font-medium">No Cafes Found</p>
-                  <p className="text-sm text-amber-100">
+                  <p className="text-sm text-amber-200">
                     No cafes found within 8km of your location. Try moving to a different area.
                   </p>
                 </div>

@@ -49,9 +49,8 @@ const CafeMarker: React.FC<CafeMarkerProps> = ({ cafe, userLocation }) => {
             left: 50%;
             width: 32px;
             height: 32px;
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            background: linear-gradient(135deg, #d4a574, #8b5a3c);
-            border: 3px solid white;
+            background: linear-gradient(135deg, #92400e, #78350f);
+            border: 3px solid #fef3c7;
             border-radius: 50% 50% 50% 0;
             display: flex;
             align-items: center;
@@ -68,10 +67,10 @@ const CafeMarker: React.FC<CafeMarkerProps> = ({ cafe, userLocation }) => {
             left: 50%;
             width: 6px;
             height: 6px;
-            background: linear-gradient(135deg, #d4a574, #8b5a3c);
+            background: linear-gradient(135deg, #92400e, #78350f);
             transform: translateX(-50%) rotate(45deg);
-            border-right: 2px solid white;
-            border-bottom: 2px solid white;
+            border-right: 2px solid #fef3c7;
+            border-bottom: 2px solid #fef3c7;
           }
           
           .cafe-marker .cafe-marker-icon {
@@ -91,16 +90,16 @@ const CafeMarker: React.FC<CafeMarkerProps> = ({ cafe, userLocation }) => {
       </style>
       <Marker position={[cafe.lat, cafe.lng]} icon={cafeIcon}>
         <Popup maxWidth={280} className="custom-popup">
-          <div className="p-2 bg-gradient-to-br from-amber-50 to-orange-50 rounded-lg">
+          <div className="p-2 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg">
             <h3 className="font-bold text-lg text-amber-900 mb-2">{cafe.name}</h3>
             
             <div className="flex items-center mb-2">
               <div className="flex items-center mr-3">
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                <Star className="w-4 h-4 text-yellow-600 fill-current" />
                 <span className="ml-1 text-sm font-medium text-amber-800">{cafe.rating}</span>
               </div>
               {distance && (
-                <div className="flex items-center text-amber-700">
+                <div className="flex items-center text-amber-800">
                   <MapPin className="w-4 h-4 mr-1" />
                   <span className="text-sm">{distance.toFixed(1)} km away</span>
                 </div>
@@ -108,13 +107,13 @@ const CafeMarker: React.FC<CafeMarkerProps> = ({ cafe, userLocation }) => {
             </div>
             
             {cafe.specialty && (
-              <p className="text-sm text-amber-700 mb-2 font-medium">
+              <p className="text-sm text-amber-800 mb-2 font-medium">
                 {cafe.specialty}
               </p>
             )}
             
             {cafe.address && (
-              <p className="text-xs text-amber-600 leading-relaxed">
+              <p className="text-xs text-amber-700 leading-relaxed">
                 {cafe.address}
               </p>
             )}
