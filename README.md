@@ -58,32 +58,25 @@ npm install
 # Run development server
 npm run dev
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Development Approach
 
----
-
-## 🛠️ Development Approach
-
-### **Phase 1: Foundation & Core Setup**
+### Phase 1: Foundation & Core Setup
 • Set up the project structure with Vite + React + TypeScript for fast development
 • Implemented geolocation API integration to detect user's current position
 • Created custom hooks (`useGeolocation`, `useCafes`) for clean state management
 • Established TypeScript interfaces for type safety across cafe and location data
 
-### **Phase 2: Map Integration & Data Fetching**
+### Phase 2: Map Integration & Data Fetching
 • Integrated Leaflet with React Leaflet for interactive mapping functionality
 • Connected to OpenStreetMap's Overpass API to fetch real-time cafe data within 8km radius
 • Built custom marker components for both user location and cafe positions
 • Implemented distance calculations and sorting algorithms for nearby cafe discovery
 
-### **Phase 3: UI/UX & Visual Polish**
+### Phase 3: UI/UX & Visual Polish
 • Designed responsive layouts with mobile-first approach using Tailwind CSS
 • Added Three.js background with coffee-themed particle effects for visual appeal
 • Implemented smooth animations using Framer Motion for enhanced user experience
 • Applied coffee-beige dark theme with proper contrast ratios for accessibility
 
 ---
-
-## 🙏 Acknowledgments
