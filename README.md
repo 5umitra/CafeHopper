@@ -1,4 +1,4 @@
-# CafeHopper
+# CafeHopper (Find Nearby Cafes - MAP)
 
 
 ## Overview
