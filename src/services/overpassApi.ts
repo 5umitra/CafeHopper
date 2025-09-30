@@ -73,13 +73,26 @@ export const fetchNearbyCafes = async (
  * @returns Array of Cafe objects
  */
 export const convertOverpassNodesToCafes = (nodes: OverpassNode[]) => {
-  return nodes.map((node, index) => ({
-    id: node.id,
-    name: node.tags?.name || `Unnamed Cafe ${index + 1}`,
-    lat: node.lat,
-    lng: node.lon,
-    address: '', // Not available from basic Overpass query
-    rating: 0, // Not available from OpenStreetMap
-    specialty: 'Coffee & Beverages', // Generic specialty for OSM cafes
-  }));
+  return nodes.map((node, index) => {
+    const tags = node.tags || {};
+
+    // Extract address components from tags
+    const addressParts = [
+      tags['addr:housenumber'],
+      tags['addr:street'],
+      tags['addr:city'],
+      tags['addr:postcode']
+    ].filter(Boolean);
+
+    const fullAddress = addressParts.length > 0 ? addressParts.join(', ') : undefined;
+
+    return {
+      id: node.id,
+      name: tags.name || `Unnamed Cafe ${index + 1}`,
+      lat: node.lat,
+      lng: node.lon,
+      address: fullAddress,
+      phone: tags.phone || tags.contact?.phone || tags['contact:phone'],
+    };
+  });
 };

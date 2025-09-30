@@ -3,9 +3,8 @@ export interface Cafe {
   name: string;
   lat: number;
   lng: number;
-  address: string;
-  rating: number;
-  specialty: string;
+  address?: string;
+  phone?: string;
 }
 
 export interface UserLocation {

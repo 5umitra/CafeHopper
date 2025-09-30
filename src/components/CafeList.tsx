@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Cafe, UserLocation } from '../types/cafe';
-import { Star, MapPin, Coffee, Navigation } from 'lucide-react';
+import { MapPin, Coffee, Navigation, Phone } from 'lucide-react';
 import { calculateDistance } from '../utils/cafeUtils';
 
 interface CafeListProps {
@@ -75,7 +75,7 @@ const CafeList: React.FC<CafeListProps> = ({
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="flex items-start justify-between mb-2">
+                  <div className="flex items-start justify-between mb-3">
                     <h3 className="font-semibold text-amber-100 text-lg leading-tight">
                       {cafe.name}
                     </h3>
@@ -86,30 +86,22 @@ const CafeList: React.FC<CafeListProps> = ({
                       </div>
                     )}
                   </div>
-                  
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="flex items-center">
-                      <Star className="w-4 h-4 text-yellow-300 fill-current" />
-                      <span className="ml-1 text-sm font-medium text-amber-100/95">
-                        {cafe.rating}
-                      </span>
+
+                  <div className="space-y-2">
+                    <div className="flex items-start gap-2">
+                      <Phone className="w-3 h-3 text-amber-300/70 mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-amber-200/85 leading-relaxed">
+                        {cafe.phone || 'Sorry! Number not found'}
+                      </p>
                     </div>
-                  </div>
-                  
-                  {cafe.specialty && (
-                    <p className="text-sm text-amber-200/95 mb-2 font-medium">
-                      {cafe.specialty}
-                    </p>
-                  )}
-                  
-                  {cafe.address && (
+
                     <div className="flex items-start gap-2">
                       <MapPin className="w-3 h-3 text-amber-300/70 mt-0.5 flex-shrink-0" />
                       <p className="text-xs text-amber-200/85 leading-relaxed">
-                        {cafe.address}
+                        {cafe.address || 'Sorry! Address not found'}
                       </p>
                     </div>
-                  )}
+                  </div>
                 </motion.div>
               );
             })}
@@ -196,7 +188,7 @@ const CafeList: React.FC<CafeListProps> = ({
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.97 }}
                       >
-                        <div className="flex items-start justify-between mb-2">
+                        <div className="flex items-start justify-between mb-3">
                           <h3 className="font-semibold text-amber-900 leading-tight">
                             {cafe.name}
                           </h3>
@@ -207,30 +199,22 @@ const CafeList: React.FC<CafeListProps> = ({
                             </div>
                           )}
                         </div>
-                        
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="flex items-center">
-                            <Star className="w-4 h-4 text-yellow-600 fill-current" />
-                            <span className="ml-1 text-sm font-medium text-amber-800">
-                              {cafe.rating}
-                            </span>
+
+                        <div className="space-y-2">
+                          <div className="flex items-start gap-2">
+                            <Phone className="w-3 h-3 text-amber-700 mt-0.5 flex-shrink-0" />
+                            <p className="text-xs text-amber-800 leading-relaxed">
+                              {cafe.phone || 'Sorry! Number not found'}
+                            </p>
                           </div>
-                        </div>
-                        
-                        {cafe.specialty && (
-                          <p className="text-sm text-amber-800 mb-2 font-medium">
-                            {cafe.specialty}
-                          </p>
-                        )}
-                        
-                        {cafe.address && (
+
                           <div className="flex items-start gap-2">
                             <MapPin className="w-3 h-3 text-amber-700 mt-0.5 flex-shrink-0" />
                             <p className="text-xs text-amber-800 leading-relaxed">
-                              {cafe.address}
+                              {cafe.address || 'Sorry! Address not found'}
                             </p>
                           </div>
-                        )}
+                        </div>
                       </motion.div>
                     );
                   })}
