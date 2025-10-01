@@ -4,6 +4,7 @@
 
 **CafeHopper** is a web application designed to help users discover coffee shops near their location.  
 It leverages real-time geolocation and OpenStreetMap data to provide an interactive map, detailed information about each cafe, and tools to plan your coffee visits.
+I have added some more bonus feature like fetching the address and contact number of nearby cafes during fetching all those names of cafe through OverpassPI.
 
 ---
 
