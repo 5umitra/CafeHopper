@@ -68,19 +68,19 @@ const CafeList: React.FC<CafeListProps> = ({
                   transition={{ delay: index * 0.1 }}
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${
                     selectedCafeId === cafe.id
-                      ? 'bg-neutral-700 border-2 border-neutral-500 shadow-xl'
-                      : 'bg-neutral-800/90 border border-neutral-700/50 hover:bg-neutral-700/90 hover:border-neutral-600'
+                      ? 'bg-neutral-200 border-2 border-neutral-400 shadow-xl'
+                      : 'bg-neutral-100 border border-neutral-300 hover:bg-neutral-200 hover:border-neutral-400'
                   }`}
                   onClick={() => onCafeSelect(cafe.id)}
                   whileHover={{ scale: 1.03, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="font-semibold text-white text-lg leading-tight">
+                    <h3 className="font-semibold text-neutral-900 text-lg leading-tight">
                       {cafe.name}
                     </h3>
                     {distance && (
-                      <div className="flex items-center text-neutral-300 text-xs ml-2">
+                      <div className="flex items-center text-neutral-700 text-xs ml-2">
                         <Navigation className="w-3 h-3 mr-1" />
                         {distance.toFixed(1)}km
                       </div>
@@ -89,15 +89,15 @@ const CafeList: React.FC<CafeListProps> = ({
 
                   <div className="space-y-2">
                     <div className="flex items-start gap-2">
-                      <Phone className="w-3 h-3 text-neutral-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-xs text-neutral-300 leading-relaxed">
+                      <Phone className="w-3 h-3 text-neutral-600 mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-neutral-700 leading-relaxed">
                         {cafe.phone || 'Sorry! Number not found'}
                       </p>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <MapPin className="w-3 h-3 text-neutral-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-xs text-neutral-300 leading-relaxed">
+                      <MapPin className="w-3 h-3 text-neutral-600 mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-neutral-700 leading-relaxed">
                         {cafe.address || 'Sorry! Address not found'}
                       </p>
                     </div>
@@ -178,8 +178,8 @@ const CafeList: React.FC<CafeListProps> = ({
                         key={cafe.id}
                         className={`p-4 rounded-xl cursor-pointer transition-all ${
                           selectedCafeId === cafe.id
-                            ? 'bg-neutral-700 border-2 border-neutral-500'
-                            : 'bg-neutral-800/90 border border-neutral-700/50 hover:bg-neutral-700/90'
+                            ? 'bg-neutral-200 border-2 border-neutral-400'
+                            : 'bg-neutral-100 border border-neutral-300 hover:bg-neutral-200'
                         }`}
                         onClick={() => {
                           onCafeSelect(cafe.id);
@@ -189,11 +189,11 @@ const CafeList: React.FC<CafeListProps> = ({
                         whileTap={{ scale: 0.97 }}
                       >
                         <div className="flex items-start justify-between mb-3">
-                          <h3 className="font-semibold text-white leading-tight">
+                          <h3 className="font-semibold text-neutral-900 leading-tight">
                             {cafe.name}
                           </h3>
                           {distance && (
-                            <div className="flex items-center text-neutral-300 text-xs ml-2">
+                            <div className="flex items-center text-neutral-700 text-xs ml-2">
                               <Navigation className="w-3 h-3 mr-1" />
                               {distance.toFixed(1)}km
                             </div>
@@ -202,15 +202,15 @@ const CafeList: React.FC<CafeListProps> = ({
 
                         <div className="space-y-2">
                           <div className="flex items-start gap-2">
-                            <Phone className="w-3 h-3 text-neutral-400 mt-0.5 flex-shrink-0" />
-                            <p className="text-xs text-neutral-300 leading-relaxed">
+                            <Phone className="w-3 h-3 text-neutral-600 mt-0.5 flex-shrink-0" />
+                            <p className="text-xs text-neutral-700 leading-relaxed">
                               {cafe.phone || 'Sorry! Number not found'}
                             </p>
                           </div>
 
                           <div className="flex items-start gap-2">
-                            <MapPin className="w-3 h-3 text-neutral-400 mt-0.5 flex-shrink-0" />
-                            <p className="text-xs text-neutral-300 leading-relaxed">
+                            <MapPin className="w-3 h-3 text-neutral-600 mt-0.5 flex-shrink-0" />
+                            <p className="text-xs text-neutral-700 leading-relaxed">
                               {cafe.address || 'Sorry! Address not found'}
                             </p>
                           </div>
