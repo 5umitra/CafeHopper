@@ -34,15 +34,15 @@ const CafeList: React.FC<CafeListProps> = ({
     <>
       {/* Desktop Sidebar */}
       <motion.div
-        className="hidden lg:flex flex-col h-full w-80 bg-neutral-900/90 backdrop-blur-2xl rounded-3xl shadow-2xl border border-neutral-700/50 overflow-hidden"
+        className="hidden lg:flex flex-col h-full w-80 bg-black/80 backdrop-blur-2xl rounded-3xl shadow-2xl border border-neutral-800/60 overflow-hidden"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 80 }}
         whileHover={{ scale: 1.01, transition: { duration: 0.2 } }}
       >
-        <div className="p-6 border-b border-neutral-700/50 bg-gradient-to-r from-neutral-800/90 to-neutral-900/80">
+        <div className="p-6 border-b border-neutral-800/60 bg-gradient-to-r from-neutral-900 to-black">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-neutral-800 rounded-xl backdrop-blur-sm">
+            <div className="p-2 bg-neutral-700/80 rounded-xl backdrop-blur-sm">
               <Coffee className="w-6 h-6 text-white" />
             </div>
             <div>
@@ -52,7 +52,7 @@ const CafeList: React.FC<CafeListProps> = ({
           </div>
         </div>
         
-        <div className="flex-1 overflow-y-auto p-4 space-y-3">
+        <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-black/60">
           <AnimatePresence>
             {sortedCafes.map((cafe, index) => {
               const distance = userLocation 
@@ -68,8 +68,8 @@ const CafeList: React.FC<CafeListProps> = ({
                   transition={{ delay: index * 0.1 }}
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${
                     selectedCafeId === cafe.id
-                      ? 'bg-neutral-700/80 border-2 border-neutral-500/80 shadow-xl'
-                      : 'bg-neutral-800/50 border border-neutral-700/40 hover:bg-neutral-700/60 hover:border-neutral-600/60'
+                      ? 'bg-neutral-700 border-2 border-neutral-500 shadow-xl'
+                      : 'bg-neutral-800/90 border border-neutral-700/50 hover:bg-neutral-700/90 hover:border-neutral-600'
                   }`}
                   onClick={() => onCafeSelect(cafe.id)}
                   whileHover={{ scale: 1.03, y: -2 }}
@@ -145,12 +145,12 @@ const CafeList: React.FC<CafeListProps> = ({
                 animate={{ y: 0 }}
                 exit={{ y: '100%' }}
                 transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-                className="fixed bottom-0 left-0 right-0 z-[1000] bg-neutral-900/95 backdrop-blur-2xl rounded-t-3xl shadow-2xl border-t border-neutral-700/50 max-h-[70vh] overflow-hidden"
+                className="fixed bottom-0 left-0 right-0 z-[1000] bg-black/90 backdrop-blur-2xl rounded-t-3xl shadow-2xl border-t border-neutral-800/60 max-h-[70vh] overflow-hidden"
               >
-                <div className="p-4 border-b border-neutral-700/50">
+                <div className="p-4 border-b border-neutral-800/60 bg-neutral-900">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-neutral-800 rounded-xl">
+                      <div className="p-2 bg-neutral-700/80 rounded-xl">
                         <Coffee className="w-5 h-5 text-white" />
                       </div>
                       <div>
@@ -167,7 +167,7 @@ const CafeList: React.FC<CafeListProps> = ({
                   </div>
                 </div>
                 
-                <div className="overflow-y-auto p-4 space-y-3">
+                <div className="overflow-y-auto p-4 space-y-3 bg-black/60">
                   {sortedCafes.map((cafe) => {
                     const distance = userLocation 
                       ? calculateDistance(userLocation.lat, userLocation.lng, cafe.lat, cafe.lng)
@@ -178,8 +178,8 @@ const CafeList: React.FC<CafeListProps> = ({
                         key={cafe.id}
                         className={`p-4 rounded-xl cursor-pointer transition-all ${
                           selectedCafeId === cafe.id
-                            ? 'bg-neutral-700/80 border-2 border-neutral-500'
-                            : 'bg-neutral-800/60 border border-neutral-700/40 hover:bg-neutral-700/70'
+                            ? 'bg-neutral-700 border-2 border-neutral-500'
+                            : 'bg-neutral-800/90 border border-neutral-700/50 hover:bg-neutral-700/90'
                         }`}
                         onClick={() => {
                           onCafeSelect(cafe.id);
