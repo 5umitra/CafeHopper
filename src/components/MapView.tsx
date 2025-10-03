@@ -60,13 +60,13 @@ const MapView: React.FC<MapViewProps> = ({
         <div className="absolute top-4 right-4 z-[1000] flex flex-col gap-1">
           <button
             onClick={() => mapRef.current?.zoomIn()}
-            className="w-10 h-10 bg-amber-100/95 backdrop-blur-md rounded-xl shadow-xl hover:bg-amber-200/95 transition-all duration-200 flex items-center justify-center text-amber-800 hover:text-amber-900 font-bold text-lg hover:scale-110"
+            className="w-10 h-10 bg-white/95 backdrop-blur-md rounded-xl shadow-xl hover:bg-neutral-100 transition-all duration-200 flex items-center justify-center text-neutral-800 hover:text-black font-bold text-lg hover:scale-110"
           >
             +
           </button>
           <button
             onClick={() => mapRef.current?.zoomOut()}
-            className="w-10 h-10 bg-amber-100/95 backdrop-blur-md rounded-xl shadow-xl hover:bg-amber-200/95 transition-all duration-200 flex items-center justify-center text-amber-800 hover:text-amber-900 font-bold text-lg hover:scale-110"
+            className="w-10 h-10 bg-white/95 backdrop-blur-md rounded-xl shadow-xl hover:bg-neutral-100 transition-all duration-200 flex items-center justify-center text-neutral-800 hover:text-black font-bold text-lg hover:scale-110"
           >
             −
           </button>
